@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+//import Counter from "./components/Counter";
+//import Todos from "./components/Todo";
+//Redux적용컴포넌트 불러오기
+import CounterContainer from "./containers/CounterContainer";
+//Redux적용컴포넌트 불러오기
+import TodosContainer from "./containers/TodosContainer";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/*433카운터컴포넌트만들기 <Counter number={0} />  props 외부데이터 전달 주석처리 448 컨테이너컴포넌트로 렌더 */}
+      <CounterContainer />
+      <hr />
+      {/*할일목록UI컴포넌트주석처리<Todos /> --> Redux적용 --> 454 컨테이너컴포넌트적용 */}
+      <TodosContainer />
     </div>
   );
-}
+};
 
 export default App;
